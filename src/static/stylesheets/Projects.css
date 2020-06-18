@@ -1,0 +1,80 @@
+.header {
+    margin: 10px; 
+    margin-bottom: 30px;
+    margin-left: 1em;
+}
+
+.container {
+    padding-top: 2em;
+}
+.wellness {
+    background-color: rgba(255, 181, 181, 0.5);
+}
+.project-photo {
+    margin-top: 10px;
+    margin-left: 20px;
+    float: right;
+    bottom:0px;
+    height: auto; 
+    width: auto; 
+    max-width: 50%;
+}
+
+.pennbook {
+    background-color: rgba(181, 209, 255, 0.5);
+}
+
+.phone-photo {
+    margin-left: 100px;
+    margin-right: 50px;
+    float: right;
+    bottom:0px;
+    height: auto; 
+    width: auto; 
+    max-width: 20%;
+    
+}
+
+.github-logo {
+    margin-top: 10px;
+    height: auto; 
+    width: auto; 
+    max-width: 70px;
+}
+
+.github-logo:hover {
+    margin-top: 10px;
+    height: auto; 
+    width: auto; 
+    max-width: 70px;
+    opacity: 0.5;
+}
+
+.amazon-stars {
+    margin:auto;
+    margin-left: 50px;
+    height: auto; 
+    width: auto; 
+    max-width: 50%;
+}
+
+.amazon-classifier {
+    background-color: rgb(255,153,0, 0.5);
+}
+
+.hive-logo {
+    margin:auto;
+    margin-right: 50px;
+    margin-left: 100px;
+    height: auto; 
+    width: auto; 
+    max-width: 25%;
+}
+
+.hive {
+    background-color: rgb(162,33,96, 0.5);
+}
+
+.shandy4u {
+    background-color: rgb(144, 238, 144);
+}

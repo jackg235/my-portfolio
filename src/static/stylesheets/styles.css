@@ -1,0 +1,163 @@
+.container {
+    padding-top: 1em;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.profile-picture {
+    float: left;
+    margin-right: 20px;
+}
+
+.jumbotron {
+
+    padding-bottom: 1em;
+    padding-top: 1em;
+    background-color: slategray;
+    box-shadow: 0 0 2px slategray;
+    color:white;
+
+}
+
+.jg-logo {
+    margin-bottom:50px;
+    margin-left: 10px;
+}
+
+
+
+.reg-button {
+    background-color: lightsteelblue;
+    box-shadow: 0 0 2px lightsteelblue;
+    color: white;
+    margin-right: 10px;
+
+}
+
+.reg-button:hover, .hvr-button:focus, .hvr-button:active {
+    -webkit-transform: scale(1.05); 
+    color: white;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.item-border {
+    border-color: slategray;
+    box-shadow: 0 0 2px slategray;
+}
+
+.pennbook {
+    background-color: rgba(181, 209, 255, 0.5);
+    box-shadow: 0 0 2px b5d1ff;
+}
+
+.wellness {
+    background-color: rgba(255, 181, 181, 0.5);
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-left: 20px;
+    border-right: lightsteelblue;
+}
+
+
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    color: #818181;
+    display: block;
+    border-right: lightsteelblue;
+}
+
+.sidenav a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+.title {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    font-weight: bold;
+    color: slategray;
+}
+
+.company-logo {
+    float: right;
+    right: 20px;
+    position: absolute;
+}
+
+.project-photo {
+    margin-top: 10px;
+    margin-left: 20px;
+    float: right;
+    bottom:0px;
+    height: auto; 
+    width: auto; 
+    max-width: 50%;
+}
+
+.phone-photo {
+    margin-left: 100px;
+    margin-right: 100px;
+    float: right;
+    bottom:0px;
+    height: auto; 
+    width: auto; 
+    max-width: 15%;
+    
+}
+
+.github-logo {
+    margin-top: 10px;
+    height: auto; 
+    width: auto; 
+    max-width: 70px;
+}
+
+.github-logo:hover , .github-logo:focus, .github-logo:active{
+    -webkit-transform: scale(1.1); 
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+
+.amazon-stars {
+    margin:auto;
+    margin-right: 50px;
+    margin-left: 100px;
+    height: auto; 
+    width: auto; 
+    max-width: 35%;
+}
+
+.amazon-classifier {
+    background-color: rgb(255,153,0, 0.5);
+}
+
+.hive-logo {
+    margin:auto;
+    margin-right: 50px;
+    margin-left: 100px;
+    height: auto; 
+    width: auto; 
+    max-width: 25%;
+}
+
+.hive {
+    background-color: rgb(162,33,96, 0.5);
+}
+
+.shandy4u {
+    background-color: rgb(144, 238, 144);
+}
+
+
+
+

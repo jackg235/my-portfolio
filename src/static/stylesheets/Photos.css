@@ -1,0 +1,47 @@
+.header {
+    margin: 10px; 
+    margin-bottom: 30px;
+}
+
+.container {
+    padding-top: 2em;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.section-title {
+  font-style: italic;
+}
+
+.column {
+    flex: 75%;
+    max-width: 50%;
+    padding: 0 4px;
+}
+
+.img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: 1s ease;
+}
+.img:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  transform: scale(1.01);
+}
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
