@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ProfileHeader from './ProfileHeader'
-import SideNav from './SideNav'
+import Navbar from './Navbar'
 import '../static/stylesheets/Home.css'
 import moorestown from '../static/images/moorestown-logo.png'
 import penn from '../static/images/penn-logo.png'
@@ -61,7 +61,7 @@ class Home extends Component {
     render() {
         return (
             <div className='home'>
-                <SideNav />
+                <Navbar />
                 <ProfileHeader />
                 <div className='container'>
                     <div className='about'>

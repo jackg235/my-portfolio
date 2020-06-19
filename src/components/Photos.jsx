@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SideNav from './SideNav'
+import Navbar from './Navbar'
 import '../static/stylesheets/Photos.css'
 import lake_powell from '../static/images/photos/IMG_3944.jpg'
 import bryce from '../static/images/photos/IMG_0981.JPG'
@@ -19,7 +19,7 @@ class Photos extends Component {
     render() {
         return(
             <div className='photos'>
-                < SideNav />
+                < Navbar />
                 <div className='container'>
                     <h1 className='header'>
                         Photos

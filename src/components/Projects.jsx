@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SideNav from './SideNav'
+import Navbar from './Navbar'
 import pennbook from '../static/images/pennbook.png'
 import wellness from '../static/images/wellness.png'
 import github from '../static/images/github-logo.png'
@@ -40,7 +40,7 @@ class Projects extends Component {
     render() {
         return(
             <div className='projects'>
-                < SideNav />
+                < Navbar />
                 <div className='container'>
                     <h1 className='header'>
                         Projects

@@ -7,7 +7,7 @@ class ProfileHeader extends Component {
 
     render() {
         return (
-            <div>
+            <div className='header-wrapper'>
                 <img className='wall'  src= {wall} />
                 <h1 className='name'>Hi, I'm Jack.</h1>
             </div>

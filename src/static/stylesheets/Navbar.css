@@ -1,0 +1,27 @@
+.social-part .fa{
+    padding-right:20px;
+    margin-right: 20px;
+    max-width: 30px;
+}
+
+.social-part .logo-nav {
+    max-width: 30px;
+    filter: invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg) ;
+}
+
+.brand {
+    padding-top: 1em;
+}
+
+.social-part .logo-nav:hover {
+    filter: invert(0%) sepia(0%) saturate(50%) hue-rotate(86deg) ;
+}
+.social-part .logo-git {
+    padding-left: .1em;
+    padding-top: .2em;
+    filter: invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg) ;
+}
+
+.social-part .logo-git:hover {
+    filter: invert(0%) sepia(0%) saturate(50%) hue-rotate(86deg) ;
+}
