@@ -1,80 +1,63 @@
-.header {
-    margin: 10px; 
-    margin-bottom: 30px;
-    margin-left: 1em;
+.projects {
+    font-family: 'Georgia';
 }
 
 .container {
-    padding-top: 2em;
-}
-.wellness {
-    background-color: rgba(255, 181, 181, 0.5);
-}
-.project-photo {
-    margin-top: 10px;
-    margin-left: 20px;
-    float: right;
-    bottom:0px;
-    height: auto; 
-    width: auto; 
-    max-width: 50%;
+    font-size: min(max(1.5vw, 18px), 28px);
 }
 
-.pennbook {
-    background-color: rgba(181, 209, 255, 0.5);
+
+.project-card {
+    background-color: rgb(85, 122, 149, 0.1);
+}
+
+.card-text {
+    font-size: .85em;
+}
+
+.project-photo {
+    margin-top: 20px;
+    max-width: 100%;
 }
 
 .phone-photo {
-    margin-left: 100px;
-    margin-right: 50px;
-    float: right;
-    bottom:0px;
-    height: auto; 
-    width: auto; 
-    max-width: 20%;
-    
+    display: block;
+    margin-top: 20px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 50vh;
 }
 
 .github-logo {
     margin-top: 10px;
-    height: auto; 
-    width: auto; 
+    height: auto;
+    width: auto;
     max-width: 70px;
 }
 
 .github-logo:hover {
     margin-top: 10px;
-    height: auto; 
-    width: auto; 
+    height: auto;
+    width: auto;
     max-width: 70px;
     opacity: 0.5;
 }
 
 .amazon-stars {
-    margin:auto;
-    margin-left: 50px;
-    height: auto; 
-    width: auto; 
-    max-width: 50%;
-}
-
-.amazon-classifier {
-    background-color: rgb(255,153,0, 0.5);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    margin-top: 20px;
+    max-height: 40vh;
 }
 
 .hive-logo {
-    margin:auto;
-    margin-right: 50px;
-    margin-left: 100px;
-    height: auto; 
-    width: auto; 
-    max-width: 25%;
-}
-
-.hive {
-    background-color: rgb(162,33,96, 0.5);
-}
-
-.shandy4u {
-    background-color: rgb(144, 238, 144);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+    margin-top: 20px;
+    max-height: 30vh;
 }

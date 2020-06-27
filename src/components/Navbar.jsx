@@ -26,7 +26,7 @@ class Navbar extends React.Component {
                                 <a class="nav-link" href="/projects">Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"  href="/thoughts">Thoughts</a>
+                                <a class="nav-link"  href="/blog">Blog</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link"  href="/photos">Photos</a>

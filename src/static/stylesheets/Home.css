@@ -1,74 +1,84 @@
 .home {
-    font-family: 'Georgia';
+    font-family: "Georgia";
 }
 
+.container {
+    font-size: min(max(1.5vw, 18px), 28px);
+}
 
-.desc {
-    font-size: 22px;
+.title {
+    font-size: 1.2em;
+}
+
+.about {
+    padding-bottom: 3vh;
+}
+
+.buttons-container {
+    margin-bottom: 3vh;
+    display: flex;
 }
 
 .proj-btn {
-    margin-left: 5em;
-    margin-bottom: 1em;
     background-color: rgb(85, 122, 149, 0.3) !important;
+    margin-bottom: 1vh;
 }
 
 .thoughts-btn {
-    margin-left: 1em;
-    margin-bottom: 1em;
+    margin-left: 1vw;
     background-color: rgb(85, 122, 149, 0.3) !important;
+    margin-bottom: 1vh;
 }
 
-.proj-btn:hover,.thoughts-btn:hover  {
+.proj-btn:hover,
+.thoughts-btn:hover {
     color: white !important;
     background-color: rgb(85, 122, 149) !important;
 }
 
-.card {
-    margin-left: 5em;
-    margin-right: 5em;
-}
-
-.wall {
-    width: 100%;
-    height: 100%;
-}
-
-.title {
-    margin-left: 3.5em;
-    margin-right: 2em;
+.card-title {
+    font-size: 1em;
+    position: relative;
+    margin-right: 7.5vw;
 }
 
 .company-logo {
     float: right;
     right: 20px;
     position: absolute;
-    margin-left: 100px;
+    height: max(5vw, 40px);
+    width: max(5vw, 40px);
 }
 
-.container {
-    padding-top: 2em;
+.comcast-logo {
+    float: right;
+    right: 20px;
+    position: absolute;
+    height: max(4vw, 40px);
+    width: max(6vw, 60px);
 }
 
-.about {
+.card-text {
+    font-size: 0.85em;
 }
 
-.reg-button {
-    background-color: lightsteelblue;
-    box-shadow: 0 0 2px lightsteelblue;
-    color: white;
-    margin-right: 10px;
-
+.skills-container {
+    font-size: 0.85em;
 }
 
-.reg-button:hover, .hvr-button:focus, .hvr-button:active {
-    -webkit-transform: scale(1.05); 
-    color: white;
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
+.skill-title {
+    font-size: 1.15em;
 }
 
+.skill-title-sub {
+    font-size: 1.15em;
+    margin-top: 2vh;
+}
 
-.skills {
-    font-size: 18px;
+.sub {
+    margin-bottom: 2vh;
+}
+
+.stars {
+    margin-right: 15vw;
 }
