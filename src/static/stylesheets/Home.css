@@ -2,6 +2,10 @@
     font-family: "Georgia";
 }
 
+.home .home-nav {
+    color : black !important;
+}
+
 .container {
     font-size: min(max(1.5vw, 18px), 28px);
 }

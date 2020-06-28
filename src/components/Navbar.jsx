@@ -13,23 +13,23 @@ class Navbar extends React.Component {
     render() {
         return (
                 <nav class="navbar navbar-expand-md navbar-light bg-light ">
-                    <p className='navbar-brand brand'>Jack Goettle</p>
+                    <p className='navbar-brand brand'> <a className='brand-name' href='/'>Jack Goettle</a></p>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse " id="navbarNav" >
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="/">Home</a>
+                                <a class="nav-link home-nav" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/projects">Projects</a>
+                                <a class="nav-link projects-nav" href="/projects">Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"  href="/blog">Blog</a>
+                                <a class="nav-link blog-nav"  href="/blog">Blog</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"  href="/photos">Photos</a>
+                                <a class="nav-link photos-nav"  href="/photos">Photos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link"  href={resume} target = "_blank" rel="noopener noreferrer">Resume</a>

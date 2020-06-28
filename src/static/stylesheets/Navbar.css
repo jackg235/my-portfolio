@@ -4,6 +4,11 @@
     max-width: 30px;
 }
 
+.brand-name {
+    color:black !important;
+    text-decoration: none !important;
+}
+
 .social-part .logo-nav {
     max-width: 30px;
     filter: invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg) ;

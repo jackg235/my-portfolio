@@ -2,6 +2,10 @@
     font-family: 'Georgia';
 }
 
+.blog .blog-nav {
+    color:black !important;
+}
+
 .header {
     margin: 10px;
     margin-bottom: 30px;
