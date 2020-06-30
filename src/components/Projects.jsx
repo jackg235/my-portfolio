@@ -10,6 +10,7 @@ import hive from "../static/images/hive.svg";
 import nn from "../static/images/nn_quantiles.png";
 import "../static/stylesheets/Projects.css";
 import dfs from "../static/files/Beating Fanduel Daily Fantasy Baskteball.pdf";
+import trivia from "../static/images/bball-trivia.png";
 
 class Projects extends Component {
   constructor(props) {
@@ -83,6 +84,21 @@ class Projects extends Component {
         image: nn,
         col_class: "col-lg-6",
         git_link: dfs,
+        image_class: "project-photo",
+      },
+      {
+        title: "Baseball Trivia Web Application",
+        desc: `Baseball Trivia was my group final project for CIS 550: Databases and Information Systems.
+        The goal of the project was to test our database knowledge and query optimization strategy
+        (indexing, left-deep plan, restricting search space). It's a trivia web app that allows users to quiz 
+        themselves on their baseball knowledge and play with friends. Users can also search for information 
+        such as team and player stats, as well as player specific information. The app queries an Oracle DB 
+        hosted on AWS - some of the data was gathered from an online DB and 
+        some was a quired through web scraping.`,
+        tech: `AWS, MySQL, Javascript (Node), React, Selenium, Beautiful Soup`,
+        image: trivia,
+        col_class: "col-lg-6",
+        git_link: "https://github.com/jackg235/CIS550_baseball_trivia",
         image_class: "project-photo",
       },
       {

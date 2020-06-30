@@ -26,12 +26,6 @@ class Navbar extends React.Component {
                                 <a class="nav-link projects-nav" href="/projects">Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link blog-nav"  href="/blog">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link photos-nav"  href="/photos">Photos</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link"  href={resume} target = "_blank" rel="noopener noreferrer">Resume</a>
                             </li>
                             <li class="nav-item">
