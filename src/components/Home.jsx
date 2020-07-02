@@ -25,7 +25,7 @@ class Home extends Component {
     return (
       <div>
         {this.state.education.map((val) => (
-          <div class="card flex-md-row mb-4 box-shadow h-md-250 item-border">
+          <div class="card mb-4">
             <div class="card-body d-flex flex-column align-items-start">
               <h5 className="card-title">
                 <b>{val.title}</b>
@@ -48,7 +48,7 @@ class Home extends Component {
     return (
       <div>
         {this.state.experience.map((val) => (
-          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+          <div class="card mb-4">
             <div class="card-body d-flex flex-column align-items-start">
               <h5 className="card-title">
                 <b>{val.title}</b>
