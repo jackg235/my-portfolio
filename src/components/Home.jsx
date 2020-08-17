@@ -241,8 +241,13 @@ class Home extends Component {
       image_class: "company-logo",
       date: "May-August 2020",
       loc: "San Francisco, CA (remote)",
-      p1: "",
-      p2: "",
+      p1: `Building OAuth solutions on the Identity and Access Management team for the Square Developer API. 
+      Designed and implemented a public-facing webhook in Go to notify 3rd party applications when a merchant 
+      has revoked an access token. Created internal feed for OAuth revocations, integrated with AWS, 
+      and setup Signalform monitoring. `,
+      p2: `Won Square’s Intern Hack Week. Worked on a team of 5 to construct a hardware recommendation engine 
+      and web application for guiding Square sellers in choosing a point-of-sale device. 
+      Demoed application to CEO and core team.`,
     });
 
     exp.push({
