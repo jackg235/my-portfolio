@@ -6,6 +6,11 @@
     color : black !important;
 }
 
+.container {
+    padding-top: 2em;
+    font-size: min(max(1vw, 1px), 1px);
+}
+
 .title {
     font-size: 1.2em;
 }

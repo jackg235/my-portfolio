@@ -8,6 +8,7 @@ import shandy from "../static/images/shandy4u.png";
 import amazon from "../static/images/amazon-stars.png";
 import hive from "../static/images/hive.svg";
 import nn from "../static/images/nn_quantiles.png";
+import site from "../static/images/this-site.png"
 import "../static/stylesheets/Projects.css";
 import dfs from "../static/files/Beating Fanduel Daily Fantasy Baskteball.pdf";
 import trivia from "../static/images/bball-trivia.png";
@@ -84,6 +85,17 @@ class Projects extends Component {
         image: nn,
         col_class: "col-lg-6",
         git_link: dfs,
+        image_class: "project-photo",
+      },
+      {
+        title: "My Personal Website!",
+        desc: `AKA the site you are on right now. I modularized the code such that an individual 
+        wishing to replicate the website for themselves wouldn't need much of a programming background. 
+        It's a bootstrapped web application built on React and deployed using AWS Amplify.`,
+        tech: `React, CSS, HTML`,
+        image: site,
+        col_class: "col-lg-6",
+        git_link: "https://github.com/jackg235/my-portfolio",
         image_class: "project-photo",
       },
       {

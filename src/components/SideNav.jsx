@@ -1,3 +1,4 @@
+// UNUSED
 import React, { Component } from 'react'
 import '../static/stylesheets/SideNav.css'
 import resume from '../static/files/resume.pdf'
