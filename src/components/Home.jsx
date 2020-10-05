@@ -226,8 +226,7 @@ class Home extends Component {
       gpa: 4.61,
       p1:
         "Tests: SAT | 2300 - (M 770, CR 750, WR 780), Awards: National Merit Commended Scholar, National AP Scholar",
-      p2: `Involvement: Student Council President, Honors and Service Society President, Cross Country
-            Co-Captain,
+      p2: `Involvement: Student Council President, Honors and Service Society President, Varsity Cross Country,
             Technology Student Association President`,
     });
     return education;
