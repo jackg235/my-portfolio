@@ -211,7 +211,7 @@ class Home extends Component {
       image: penn,
       image_class: "company-logo",
       date: "2017-2021",
-      gpa: 3.52,
+      gpa: 3.60,
       p1: "Minors: Math | Data Science | Entrepreneurship",
       p2: `Coursework: Data Structures and Algorithms, Scalable and Cloud Computing, 
             iOS Development, Advanced Probability, Software Design, 
