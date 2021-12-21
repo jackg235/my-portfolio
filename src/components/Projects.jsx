@@ -11,6 +11,9 @@ import nn from "../static/images/nn_quantiles.png";
 import site from "../static/images/this-site.png"
 import "../static/stylesheets/Projects.css";
 import dfs from "../static/files/Beating Fanduel Daily Fantasy Baskteball.pdf";
+import cis555 from "../static/files/cis555_report-3.pdf";
+import cis555Arch from "../static/images/ciss55arch-vertical.png";
+import socialNet from "../static/images/twilio.jpg";
 import trivia from "../static/images/bball-trivia.png";
 
 class Projects extends Component {
@@ -64,6 +67,35 @@ class Projects extends Component {
 
   projects() {
     return [
+      {
+        title: "Google Search Clone",
+        desc: `For my CIS 555 term project, I built a Google Search clone. This project leveraged many of the 
+        skills I had honed in on and design paradigms I had learned over the course of the semester - 
+        distributed and parallel processing, multithreaded design, stream processing, efficient caching and indexing, 
+        and master-worker relationships. My work culminated in the completion of a lightning fast crawler, 
+        carefully crafted indexer and PageRank, and a search engine which combined the previous elements, 
+        allowing the end user to interact with the system through an intuitive and easy-to-use web interface. This
+        was a group project (team of 4), and I was responsibile for designing a distributed web crawler (crawled 6k new
+        web pages / minute) and the search interface. The project
+        used DynamoDB and S3 for storage and was hosted using EC2.`,
+        tech: `Java, SparkJava, Apache Storm, AWS EC2, AWS DynamoDB, AWS S3, MapReduce, ReactJS`,
+        image: cis555Arch,
+        col_class: "col-lg-6",
+        git_link: cis555,
+        image_class: "project-photo",
+      },
+      {
+        title: "Microblogging, Messaging and Streaming Social Network Web App",
+        desc: `My final project for CIS 557 was to build a social network web application. We had a lot of cool features and received 
+         the highest grade in the class. Some features include: following users, posting microblogs, asynchronous messaging (text, audio, and video), 
+         live streaming, notifications, continuous integration support, and automated testing using selenium. 
+         We stored our data in MongoDB and deployed the app using Heroku.`,
+        tech: `ReactJS, NodeJS, Twilio, Express, MongoDB, Heroku, Selenium, TravisCI, Swagger`,
+        image: socialNet,
+        col_class: "col-lg-6",
+        git_link: "https://github.com/jackg235/microblogging-social-network",
+        image_class: "project-photo",
+      },
       {
         title: "Beating the Daily Fantasy Basketball 50/50 Challenge",
         desc: `As a side project (that ultimately turned into a final

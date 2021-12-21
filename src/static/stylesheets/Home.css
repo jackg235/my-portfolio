@@ -37,7 +37,7 @@
 
 .proj-btn:hover,
 .thoughts-btn:hover {
-    color: white !important;
+    color: black !important;
     background-color: rgb(85, 122, 149) !important;
 }
 
