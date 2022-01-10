@@ -201,7 +201,7 @@ class Home extends Component {
       date: "2020-2022",
       gpa: "4.0",
       p1:
-        "Coursework: Applied Machine Learning, Databases, Engineering Entrepreneurship",
+        "Coursework (* indicates A+ letter grade):  Applied Machine Learning*, Internet & Web Systems*, Database and Information Systems, Product Design*, Programming for the Web*, Theory of Computation, Advanced Analysis of Algorithms",
     });
     education.push({
       title:
@@ -211,7 +211,7 @@ class Home extends Component {
       image: penn,
       image_class: "company-logo",
       date: "2017-2021",
-      gpa: 3.60,
+      gpa: 3.61,
       p1: "Minors: Math | Data Science | Entrepreneurship",
       p2: `Coursework: Data Structures and Algorithms, Scalable and Cloud Computing, 
             iOS Development, Advanced Probability, Software Design, 
@@ -234,6 +234,38 @@ class Home extends Component {
 
   getWorkExperience() {
     var exp = [];
+    exp.push({
+      title: "Head Teaching Assistant - Database and Information Systems (CIS 550) ",
+      image: penn,
+      image_class: "company-logo",
+      date: "Sep 2021 - Present",
+      loc: "Philadelphia, PA",
+      p1: `Responsible for managing a graduate-level class of ~150 students and 19 TAs. Responsibilities 
+      include organizing & creating course content, teaching weekly recitations, holding office hours, and 
+      developing homework problems and solutions.`,
+      p2: `Topics taught: advanced SQL, DBMS, relational design theory, MongoDB, AWS, query optimization, 
+      NodeJS, React, Neo4j.`,
+    });
+    exp.push({
+      title: "Teaching Assistant - Engineering Entrepreneurship (EAS 545) ",
+      image: penn,
+      image_class: "company-logo",
+      date: "Jan 2021 - Present",
+      loc: "Philadelphia, PA",
+      p1: `Responsible for grading weekly quizzes & essays on Harvard case studies for a class of 40 students. 
+      Topics taught: fundamentals of high-tech ventures, raising capital, evaluating VC term sheets, marketing, IP.`,
+    });
+    exp.push({
+      title: "Software Engineer Intern - Square",
+      image: square,
+      image_class: "company-logo",
+      date: "May-August 2021",
+      loc: "Atlanta, GA (remote)",
+      p1: `Worked on the Inventory team to design and build API endpoints for retrieving and updating inventory transfers in Go. 
+      Developed a comprehensive engineering design for an Inventory Vendor API that will allow Square sellers to manage their vendors and supply chain via Square’s Connect API. `,
+      p2: `Placed top 3 in Square’s Intern Hack Week. Worked on a team of 4 to build Square Vendor Marketplace - a web application that will allow Square sellers to find and 
+      vet vendors for their products and services, streamlining their supply chain. Demoed application to CEO and core team.`,
+    });
     exp.push({
       title: "Software Engineer Intern - Square",
       image: square,
