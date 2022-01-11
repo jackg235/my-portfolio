@@ -31,6 +31,9 @@ class Navbar extends React.Component {
                             <li class="nav-item">
                                 <a class="nav-link"  href="mailto:jackgoettle23@gmail.com">Contact</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link projects-nav" target = "_blank" rel="noopener noreferrer" href="/zoom">Zoom</a>
+                            </li>
                         </ul>
                         <ul class='navbar-nav social-part flex-row ml-md-auto d-md-flex'>
 
