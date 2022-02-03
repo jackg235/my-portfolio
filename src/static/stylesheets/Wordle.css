@@ -1,0 +1,42 @@
+.wordle {
+    font-family: 'Georgia';
+}
+
+.wordle .wordle-nav {
+    color: black !important;
+}
+
+.wordle-table {
+    border-collapse:separate; 
+    border-spacing:0.5em;
+    table-layout:fixed;
+    width:100%;
+}
+
+.wordle-grid {
+    max-width: 500px;
+}
+
+tr td {
+    position: relative;
+    border: 2px solid lightgray;
+    height: max(12px, 5vw);
+}
+
+
+
+.wordle-table > tbody > tr > td {
+    font-weight: bold;
+    text-align: center;
+    font-size: max(14px, 3vw);
+}
+
+.keyboard-button {
+    margin: 5px;
+    font-weight: bold;
+    font-size: max(12px, 1.5vw);
+}
+
+.keyboard {
+    padding-bottom: 1vh;
+}

@@ -12,30 +12,33 @@ class Navbar extends React.Component {
 
     render() {
         return (
-                <nav class="navbar navbar-expand-md navbar-light bg-light ">
+                <nav className="navbar navbar-expand-md navbar-light bg-light ">
                     <p className='navbar-brand brand'> <a className='brand-name' href='/'>Jack Goettle</a></p>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse " id="navbarNav" >
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link home-nav" href="/">Home</a>
+                    <div className="collapse navbar-collapse " id="navbarNav" >
+                        <ul className="navbar-nav mr-auto">
+                            <li className="nav-item">
+                                <a className="nav-link home-nav" href="/">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link projects-nav" href="/projects">Projects</a>
+                            <li className="nav-item">
+                                <a className="nav-link projects-nav" href="/projects">Projects</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link"  href={resume} target = "_blank" rel="noopener noreferrer">Resume</a>
+                            <li className="nav-item">
+                                <a className="nav-link"  href={resume} target = "_blank" rel="noopener noreferrer">Resume</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link"  href="mailto:jackgoettle23@gmail.com">Contact</a>
+                            <li className="nav-item">
+                                <a className="nav-link"  href="mailto:jackgoettle23@gmail.com">Contact</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link projects-nav" target = "_blank" rel="noopener noreferrer" href="/zoom">Zoom</a>
+                            <li className="nav-item">
+                                <a className="nav-link" target = "_blank" rel="noopener noreferrer" href="/zoom">Zoom</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link wordle-nav" href="/wordle">Wordle for Ren</a>
                             </li>
                         </ul>
-                        <ul class='navbar-nav social-part flex-row ml-md-auto d-md-flex'>
+                        <ul className='navbar-nav social-part flex-row ml-md-auto d-md-flex'>
 
                             <li>
                                 <a className='fa' href='https://www.instagram.com/jackgoettle' target="_blank" rel="noopener noreferrer">
