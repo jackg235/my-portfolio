@@ -8,7 +8,7 @@ const WordleKeyboard = (props) => {
 
     return (
       <div className="keyboard container-fluid">
-          <div className="row justify-content-center flex-nowrap">
+          <div className="row justify-content-center flex-nowrap keyboard-row">
               <button onClick={handleClick} id="Q" className="btn btn-light keyboard-button">Q</button>
               <button onClick={handleClick} id="W" className="btn btn-light keyboard-button">W</button>
               <button onClick={handleClick} id="E" className="btn btn-light keyboard-button">E</button>
@@ -20,7 +20,7 @@ const WordleKeyboard = (props) => {
               <button onClick={handleClick} id="O" className="btn btn-light keyboard-button">O</button>
               <button onClick={handleClick} id="P" className="btn btn-light keyboard-button">P</button>
           </div>
-          <div className="row justify-content-center flex-nowrap">
+          <div className="row justify-content-center flex-nowrap keyboard-row ">
               <button onClick={handleClick} id="A" className="btn btn-light keyboard-button">A</button>
               <button onClick={handleClick} id="S" className="btn btn-light keyboard-button">S</button>
               <button onClick={handleClick} id="D" className="btn btn-light keyboard-button">D</button>
@@ -31,7 +31,7 @@ const WordleKeyboard = (props) => {
               <button onClick={handleClick} id="K" className="btn btn-light keyboard-button">K</button>
               <button onClick={handleClick} id="L" className="btn btn-light keyboard-button">L</button>
           </div>
-          <div className="row justify-content-center flex-nowrap">
+          <div className="row justify-content-center flex-nowrap keyboard-row ">
               <button onClick={handleClick} id="Z" className="btn btn-light keyboard-button">Z</button>
               <button onClick={handleClick} id="X" className="btn btn-light keyboard-button">X</button>
               <button onClick={handleClick} id="C" className="btn btn-light keyboard-button">C</button>

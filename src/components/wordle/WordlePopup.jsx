@@ -10,8 +10,15 @@ const WordlePopup = (props) => {
   };
 
   const share = (e) => {
-    navigator.clipboard.writeText(props.shareText)
+    //navigator.clipboard.writeText(props.shareText)
+    const el = document.createElement('textarea');
+    el.value = props.shareText;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
   }
+
 
   useEffect(() => {
     setShow(props.show);

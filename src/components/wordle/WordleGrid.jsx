@@ -38,7 +38,6 @@ export default function WordleGrid(props) {
             for (let j = 1; j <= answer.length; j++) {
                 const node = document.querySelector(`#e${i}${j}`);
                 if (!node.textContent) {
-                    console.log(shareText)
                     return shareText;
                 }
                 if (node.style.backgroundColor === "rgb(0, 0, 128)") {
@@ -72,7 +71,6 @@ export default function WordleGrid(props) {
 
     const setCurrentCellValue = letter => {
         const nodeName = `e${row}${col}`
-        console.log("changing value for " + nodeName)
         const node = document.querySelector(
             `#${nodeName}`
         );
@@ -83,7 +81,6 @@ export default function WordleGrid(props) {
 
     const deleteCellValue = (r, c) => {
         const nodeName = `e${r}${c}`
-        console.log("changing value for " + nodeName)
         const node = document.querySelector(
             `#${nodeName}`
         );
@@ -97,7 +94,6 @@ export default function WordleGrid(props) {
 
         // check if backspace
         if (e.keyCode === 8) {
-            console.log("backspace!!!")
             deleteCellValue(row, col - 1)
             setCol(Math.max(1, col - 1))
             return;
@@ -111,7 +107,6 @@ export default function WordleGrid(props) {
             setCol(col + 1)
         } else {
             // handle last character
-            console.log("handling last character")
             handleLastCharacter()
         }
     }
@@ -119,7 +114,6 @@ export default function WordleGrid(props) {
     const handleLastCharacter = () => {
         const isCorrect = colorGuess()
         saveToLocalStorage()
-        console.log("iscorrect: " + isCorrect)
 
         if (isCorrect) {
             handleEnd(true)
@@ -144,7 +138,6 @@ export default function WordleGrid(props) {
     }
 
     const colorGuess = () => {
-        console.log(today)
         var ansCopy = answer.toUpperCase();
         var correctIndices = []
         for (let i = 0; i < answer.length; i++) {
@@ -160,7 +153,6 @@ export default function WordleGrid(props) {
         if (correctIndices.length == answer.length) {
             return true;
         }
-        console.log("ans copy= " + ansCopy)
         for (let i = 0; i < answer.length; i++) {
             if (correctIndices.includes(i)) {
                 continue;
@@ -177,7 +169,6 @@ export default function WordleGrid(props) {
     }
 
     const handleEnd = (win) => {
-        console.log("handling game over. win = " + win)
         setShareText(createShareText())
         setPopupVisibility(true)
     }
@@ -195,7 +186,6 @@ export default function WordleGrid(props) {
             }
             var ansCopy = answer.toUpperCase();
             var correctIndices = []
-            console.log(guess)
             for (let i = 0; i < guess.length; i++) {
                 const nodeName = `e${k}${i+1}`
                 const node = document.querySelector(`#${nodeName}`);
@@ -227,12 +217,10 @@ export default function WordleGrid(props) {
             k++;
         }
     }
-    
+
     const handleCallback = (key) =>{
-        console.log(key)
         // check if backspace
         if (key === "del") {
-            console.log("backspace!!!")
             deleteCellValue(row, col - 1)
             setCol(Math.max(1, col - 1))
             return;
@@ -243,7 +231,6 @@ export default function WordleGrid(props) {
             setCol(col + 1)
         } else {
             // handle last character
-            console.log("handling last character")
             handleLastCharacter()
         }
     }

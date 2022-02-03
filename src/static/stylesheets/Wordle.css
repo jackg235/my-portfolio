@@ -32,11 +32,16 @@ tr td {
 }
 
 .keyboard-button {
-    margin: 5px;
+    margin: max(0.2vw, 1px);
     font-weight: bold;
     font-size: max(12px, 1.5vw);
 }
 
 .keyboard {
     padding-bottom: 1vh;
+}
+
+.keyboard-row {
+    margin: auto;
+    height: 50px;
 }
