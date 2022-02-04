@@ -77,7 +77,7 @@ class Home extends Component {
           </h4>
           <div className="about">
             I'm a Computer Science student at the University of Pennsylvania
-            pursuing Bachelor's and Master's degrees in engineering. I enjoy
+            pursuing a Master's degree in engineering. I enjoy
             traveling to national parks with my family, watching my Philadelphia
             Eagles, and playing with my Bernese Mountain Dog, Carson. I'm
             unabatingly curious and love to build cool stuff and learn new
