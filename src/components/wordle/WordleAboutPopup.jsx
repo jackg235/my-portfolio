@@ -31,7 +31,7 @@ export default function WordleAboutPopup(props) {
             <p className="about-content"> She wanted it as a Valentine's day gift. I said sure, I can build it. 
             Way cheaper than dinner at Parc anyways lol.
             </p>
-            <p className="about-content"> If the layout of the game looks weird on your phone (ex. keyboard runs of the screen),
+            <p className="about-content"> If the layout of the game looks weird on your phone (ex. keyboard runs off the screen),
             then try using your laptop. Or better yet, get a new phone. You won't miss your 12-year-old iPhone 4.
             </p>
             <p className="about-content"> Feel free to check out my other <a href="/projects">projects</a> that are actually 
