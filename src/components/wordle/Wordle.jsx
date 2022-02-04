@@ -11,7 +11,7 @@ const Wordle = () => {
         <div className="wordle">
         <NavBar/>
         <div className="container">
-            <h1>Renna's Wordle</h1>
+            <h1>Renna's PT Wordle</h1>
             <WordleGrid answer={answer}/>
         </div>
       </div>

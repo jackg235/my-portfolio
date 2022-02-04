@@ -26,19 +26,19 @@ export default function WordleGrid(props) {
     const [popupVisible, setPopupVisibility] = useState(false);
     const numRows = 6
     const today = getDate()
-    const answer = Words.words[today] != null ? Words.words[today] : "jackg"
+    const answer = Words.words[today] != null ? Words.words[today] : "JACKG"
 
     const correctBox = "🟦"
     const badSpot = "🟨"
     const badLetter = "⬜️"
 
     const createShareText = () => {
-        var shareText = "Renna's Wordle " + today + "\n"
+        var shareText = "Renna's PT Wordle " + today + "\n"
         for (let i = 1; i <= numRows; i++) {
             for (let j = 1; j <= answer.length; j++) {
                 const node = document.querySelector(`#e${i}${j}`);
                 if (!node.textContent) {
-                    return shareText;
+                    return shareText.substring(0, shareText.lastIndexOf("\n"));
                 }
                 if (node.style.backgroundColor === "rgb(0, 0, 128)") {
                     shareText = shareText + correctBox;
@@ -51,7 +51,7 @@ export default function WordleGrid(props) {
             }
             shareText = shareText + "\n"
         }
-        return shareText
+        return shareText.substring(0, shareText.lastIndexOf("\n"));
     }
 
     const generateGrid = (r, c) => {
@@ -70,7 +70,8 @@ export default function WordleGrid(props) {
     }
 
     const setCurrentCellValue = letter => {
-        const nodeName = `e${row}${col}`
+        const column = Math.min(answer.length, col)
+        const nodeName = `e${row}${column}`
         const node = document.querySelector(
             `#${nodeName}`
         );
@@ -86,28 +87,6 @@ export default function WordleGrid(props) {
         );
         if (node !== null) {
             node.textContent = "";
-        }
-    }
-
-    const onKeyDown = e => {
-        const l = e.key.toUpperCase()
-
-        // check if backspace
-        if (e.keyCode === 8) {
-            deleteCellValue(row, col - 1)
-            setCol(Math.max(1, col - 1))
-            return;
-        } else if (e.keyCode < 65 || e.keyCode > 90) {
-            e.preventDefault()
-            return;
-        }
-        setCurrentCellValue(l)
-        // check if we have more characters in the word
-        if (col < answer.length) {
-            setCol(col + 1)
-        } else {
-            // handle last character
-            handleLastCharacter()
         }
     }
 
@@ -163,6 +142,9 @@ export default function WordleGrid(props) {
                 node.style.backgroundColor = "#FFC915";
                 node.style.color = "white"
                 ansCopy = ansCopy.replace(node.textContent, '')
+            } else {
+                node.style.backgroundColor = "#C8C8C8";
+                node.style.color = "white"
             }
         }
         return false;
@@ -173,7 +155,7 @@ export default function WordleGrid(props) {
         setPopupVisibility(true)
     }
     const popupCloseHandler = (e) => {
-        setPopupVisibility(e);
+        setPopupVisibility(false);
       };
     
     const setFromLocalStorage = () => {
@@ -212,27 +194,52 @@ export default function WordleGrid(props) {
                     node.style.backgroundColor = "#FFC915";
                     node.style.color = "white"
                     ansCopy = ansCopy.replace(node.textContent, '')
+                } else {
+                    node.style.backgroundColor = "#C8C8C8";
+                    node.style.color = "white"
                 }
             }
             k++;
         }
     }
 
+    const onKeyDown = e => {
+        const l = e.key.toUpperCase()
+        console.log(e.keyCode)
+        // check if backspace
+        if (e.keyCode === 8) {
+            deleteCellValue(row, col-1)
+            setCol(Math.max(1, col - 1))
+            return;
+        } 
+        // if enter, and at the end of the word
+        else if (e.keyCode === 13) {
+            if (col > answer.length) {
+                handleLastCharacter()
+            }
+            return;
+        }else if (e.keyCode < 65 || e.keyCode > 90) {
+            e.preventDefault()
+            return;
+        }
+        setCurrentCellValue(l)
+        setCol(Math.min(answer.length + 1, col + 1))
+    }
+
     const handleCallback = (key) =>{
         // check if backspace
         if (key === "del") {
-            deleteCellValue(row, col - 1)
+            deleteCellValue(row, col-1)
             setCol(Math.max(1, col - 1))
             return;
-        }
+        } else if (key === "ent") {
+            if (col > answer.length) {
+                handleLastCharacter()
+            }
+            return;
+        } 
         setCurrentCellValue(key)
-        // check if we have more characters in the word
-        if (col < answer.length) {
-            setCol(col + 1)
-        } else {
-            // handle last character
-            handleLastCharacter()
-        }
+        setCol(Math.min(answer.length + 1, col + 1))
     }
 
     useEffect(() => {
@@ -265,7 +272,7 @@ export default function WordleGrid(props) {
                 onClose={popupCloseHandler}
                 show={popupVisible}
                 shareText={shareText}
-                title="Nice work. See you tomorrow!"
+                title="Nice work, nerd. See you tomorrow!"
                 >
             </WordlePopup>
         </div>

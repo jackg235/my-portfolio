@@ -10,7 +10,6 @@ const WordlePopup = (props) => {
   };
 
   const share = (e) => {
-    //navigator.clipboard.writeText(props.shareText)
     const el = document.createElement('textarea');
     el.value = props.shareText;
     document.body.appendChild(el);
@@ -33,10 +32,10 @@ const WordlePopup = (props) => {
       className={"overlay"}
     >
       <div className={"popup"}>
-        <h3>{props.title}</h3>
-        <button onClick={share}>
-            Share
-        </button>
+        <h3 className="title">{props.title}</h3>
+        <a class="btn popup-btn" onClick={share} role="button">
+        Copy Results
+            </a>
         <span className={"close"} onClick={closeHandler}>
           &times;
         </span>

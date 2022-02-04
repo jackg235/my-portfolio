@@ -15,9 +15,14 @@
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 30%;
+  width: 50%;
   position: relative;
   transition: all 5s ease-in-out;
+}
+
+.title {
+  padding-top: 25px;
+  padding-bottom: 10px;
 }
 
 .popup .close {
@@ -37,6 +42,21 @@
 .popup .content {
   max-height: 70%;
   overflow: auto;
+}
+
+.popup-btn {
+  background-color: rgb(85, 122, 149, 0.3) !important;
+  margin-bottom: 1vh;
+}
+
+.popup-btn:hover {
+  color: black !important;
+  background-color: rgb(85, 122, 149) !important;
+}
+
+.popup-btn:active {
+  color: black !important;
+  background-color: white !important;
 }
  
 @media screen and (max-width: 700px) {

@@ -1,10 +1,55 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import Words from './WordleWords'
+
+const getDate = () => {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
+    return today
+}
+
 
 const WordleKeyboard = (props) => {
     const handleClick = (e) => {
         props.parentCallback(e.target.id);
         e.preventDefault();
     }
+    const today = getDate()
+    const answer = Words.words[today] != null ? Words.words[today] : "JACKG"
+
+    const getGuessesFromLocalStorage = () => {
+        console.log("here")
+        var k = 1;
+        while (true) {
+            const guess = localStorage.getItem(`guess${k}`);
+            if (!guess) {
+                break;
+            }
+            for (let i = 0; i < guess.length; i++) {
+                const letter = guess.charAt(i);
+                const node = document.querySelector(`#${letter}`);
+                if (answer.charAt(i).toUpperCase() === letter) {
+                    node.style.backgroundColor = "#000080";
+                    node.style.color = "white";
+                } else if (answer.toUpperCase().includes(letter)) {
+                    if (node.style.backgroundColor !== "rgb(0, 0, 128)") {
+                        node.style.backgroundColor = "#FFC915";
+                        node.style.color = "white"
+                    }
+                } else {
+                    node.style.backgroundColor = "#C8C8C8";
+                    node.style.color = "white"
+                }
+            }
+            k++;
+        }
+    }
+
+    useEffect(() => {
+        getGuessesFromLocalStorage()
+    });
 
     return (
       <div className="keyboard container-fluid">
@@ -32,6 +77,7 @@ const WordleKeyboard = (props) => {
               <button onClick={handleClick} id="L" className="btn btn-light keyboard-button">L</button>
           </div>
           <div className="row justify-content-center flex-nowrap keyboard-row ">
+              <button onClick={handleClick} id="ent" className="btn btn-light keyboard-button">Enter</button>
               <button onClick={handleClick} id="Z" className="btn btn-light keyboard-button">Z</button>
               <button onClick={handleClick} id="X" className="btn btn-light keyboard-button">X</button>
               <button onClick={handleClick} id="C" className="btn btn-light keyboard-button">C</button>
