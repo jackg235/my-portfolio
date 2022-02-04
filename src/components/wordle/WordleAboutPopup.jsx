@@ -28,7 +28,7 @@ export default function WordleAboutPopup(props) {
             <p className="about-content"> My girlfriend, Renna, really likes Wordle, and also her friend's at PT school, 
                 so she asked me if I could make her a Drexel PT-themed version. 
             </p>
-            <p className="about-content"> She wanted it as a Valentine's day gift, so I said sure, I can build it. 
+            <p className="about-content"> She wanted it as a Valentine's day gift. I said sure, I can build it. 
             Way cheaper than dinner at Parc anyways lol.
             </p>
             <p className="about-content"> If the layout of the game looks weird on your phone (ex. keyboard runs of the screen),
