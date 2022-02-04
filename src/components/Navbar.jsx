@@ -35,7 +35,7 @@ class Navbar extends React.Component {
                                 <a className="nav-link" target = "_blank" rel="noopener noreferrer" href="/zoom">Zoom</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link wordle-nav" href="/wordle">Wordle for Ren</a>
+                                <a className="nav-link wordle-nav" href="/wordle">Wordle</a>
                             </li>
                         </ul>
                         <ul className='navbar-nav social-part flex-row ml-md-auto d-md-flex'>
