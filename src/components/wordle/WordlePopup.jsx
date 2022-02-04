@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import '../../static/stylesheets/Popup.css'
+import WordleAboutPopup from './WordleAboutPopup'
 
 const WordlePopup = (props) => {
   const [show, setShow] = useState(false);
-
+  const [popupVisible, setPopupVisibility] = useState(false);
+  const popupHandler = (e) => {
+    setPopupVisibility(!popupVisible);
+  };
   const closeHandler = (e) => {
     setShow(false);
     props.onClose(false);
@@ -36,6 +40,12 @@ const WordlePopup = (props) => {
         <a class="btn popup-btn" onClick={share} role="button">
         Copy Results
             </a>
+            <button className="btn about-button" onClick={popupHandler}>About this project</button>
+            <WordleAboutPopup
+                onClose={popupHandler}
+                show={popupVisible}
+                >
+            </WordleAboutPopup>
         <span className={"close"} onClick={closeHandler}>
           &times;
         </span>
