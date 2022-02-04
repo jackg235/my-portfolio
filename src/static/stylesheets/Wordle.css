@@ -1,7 +1,9 @@
 .wordle {
     font-family: 'Georgia';
 }
-
+.wordle-container {
+    padding-bottom: 1vh;
+}
 .wordle .wordle-nav {
     color: black !important;
 }
@@ -23,6 +25,19 @@ tr td {
     height: max(12px, 5vw);
 }
 
+
+.about-button {
+    background-color: rgb(85, 122, 149, 0.2) !important;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 1vh;
+    margin-top: 3vh;
+  }
+  
+.about-button:hover {
+    color: black !important;
+    background-color: rgb(85, 122, 149) !important;
+  }
 
 
 .wordle-table > tbody > tr > td {
