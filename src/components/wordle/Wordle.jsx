@@ -4,6 +4,7 @@ import NavBar from "../Navbar"
 import '../../static/stylesheets/Wordle.css'
 import Footer from '../Footer'
 import WordleAboutPopup from './WordleAboutPopup'
+import {Helmet} from "react-helmet";
 
 const answer = "Renna"
 const Wordle = () => {
@@ -14,6 +15,16 @@ const Wordle = () => {
 
     return (
         <div className="wordle">
+          <Helmet>
+            <title>About - yoursite.com</title>
+            <meta name="description" content="Lorem ipsum dolor sit amet" />
+            <meta property="og:url"                content="%PUBLIC_URL%/wordle" />
+            <meta property="og:type"               content="page" />
+            <meta property="og:title"              content="Jack Goettle" />
+            <meta property="og:description"        content="Developer and product enthusiast from Moorestown, NJ." />
+            <meta property="og:image"              content="%PUBLIC_URL%/china.PNG" />
+            <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
+        </Helmet>
         <NavBar/>
         <div className="container wordle-container">
             <h1>Renna's PT Wordle</h1>
