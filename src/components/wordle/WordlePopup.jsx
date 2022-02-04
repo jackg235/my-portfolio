@@ -40,7 +40,7 @@ const WordlePopup = (props) => {
         <a class="btn popup-btn" onClick={share} role="button">
         Copy Results
             </a>
-            <button className="btn about-button" onClick={popupHandler}>About this project</button>
+            <button className="btn about-button btn-in-pop" onClick={popupHandler}>About this project</button>
             <WordleAboutPopup
                 onClose={popupHandler}
                 show={popupVisible}

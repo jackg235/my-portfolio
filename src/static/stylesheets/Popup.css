@@ -88,8 +88,13 @@
 }
 
 .popup-btn {
-  background-color: rgb(85, 122, 149, 0.3) !important;
-  margin-bottom: 1vh;
+  background-color: rgb(85, 122, 149, 0.2) !important;
+  margin: 0 auto;
+  display: block;
+}
+
+.btn-in-pop {
+  width: 100%;
 }
 
 .popup-btn:hover {
