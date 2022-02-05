@@ -16,8 +16,6 @@ const Wordle = () => {
     return (
         <div className="wordle">
           <Helmet>
-            <title>About - yoursite.com</title>
-            <meta name="description" content="Lorem ipsum dolor sit amet" />
             <meta property="og:url"                content="%PUBLIC_URL%/wordle" />
             <meta property="og:type"               content="page" />
             <meta property="og:title"              content="Jack Goettle" />
