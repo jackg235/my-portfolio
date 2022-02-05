@@ -15,14 +15,6 @@ const Wordle = () => {
 
     return (
         <div className="wordle">
-          <Helmet>
-            <meta property="og:url"                content="%PUBLIC_URL%/wordle" />
-            <meta property="og:type"               content="page" />
-            <meta property="og:title"              content="Jack Goettle" />
-            <meta property="og:description"        content="Drexel PT-themed Wordle" />
-            <meta property="og:image"              content="%PUBLIC_URL%/china.PNG" />
-            <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
-        </Helmet>
         <NavBar/>
         <div className="container wordle-container">
             <h1>Renna's PT Wordle</h1>
