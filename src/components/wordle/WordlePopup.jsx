@@ -8,10 +8,6 @@ const WordlePopup = (props) => {
   const popupHandler = (e) => {
     setPopupVisibility(!popupVisible);
   };
-  const closeHandler = (e) => {
-    setShow(false);
-    props.onClose(false);
-  };
 
   const share = (e) => {
     const el = document.createElement('textarea');
@@ -46,9 +42,6 @@ const WordlePopup = (props) => {
                 show={popupVisible}
                 >
             </WordleAboutPopup>
-        <span className={"close"} onClick={closeHandler}>
-          &times;
-        </span>
       </div>
     </div>
   );
