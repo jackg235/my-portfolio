@@ -19,7 +19,7 @@ const Wordle = () => {
             <meta property="og:url"                content="%PUBLIC_URL%/wordle" />
             <meta property="og:type"               content="page" />
             <meta property="og:title"              content="Jack Goettle" />
-            <meta property="og:description"        content="Developer and product enthusiast from Moorestown, NJ." />
+            <meta property="og:description"        content="Drexel PT-themed Wordle" />
             <meta property="og:image"              content="%PUBLIC_URL%/china.PNG" />
             <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
         </Helmet>
