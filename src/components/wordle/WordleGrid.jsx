@@ -252,8 +252,15 @@ export default function WordleGrid(props) {
             localStorage.clear();
         }
         else if (lastDate && lastDate === getDate()) {
-            console.log("we have started this already!")
-            setFromLocalStorage()
+            const guess1 = localStorage.getItem("guess1");
+            // for ilium fix
+            if (guess1.length != answer.length) {
+                console.log("clearing local storage")
+                localStorage.clear();
+            } else {
+                console.log("we have started this already!")
+                setFromLocalStorage()
+            }
         }
         return () => {
             document.removeEventListener("keydown", onKeyDown);
