@@ -254,7 +254,7 @@ export default function WordleGrid(props) {
         else if (lastDate && lastDate === getDate()) {
             const guess1 = localStorage.getItem("guess1");
             // for ilium fix
-            if (guess1.length != answer.length) {
+            if (guess1 && guess1.length != answer.length) {
                 console.log("clearing local storage")
                 localStorage.clear();
             } else {
