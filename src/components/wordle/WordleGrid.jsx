@@ -208,6 +208,10 @@ export default function WordleGrid(props) {
             }
             k++;
         }
+        if (k == numRows + 1) {
+            handleEnd(false);
+            return
+        }
     }
 
     const onKeyDown = e => {
