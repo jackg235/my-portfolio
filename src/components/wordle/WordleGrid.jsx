@@ -24,6 +24,7 @@ export default function WordleGrid(props) {
     const [col, setCol] = useState(1);
     const [shareText, setShareText] = useState("");
     const [popupVisible, setPopupVisibility] = useState(false);
+    const [resultsText, setResultsText] = useState("");
     const numRows = 6
     const today = getDate()
     const answer = Words.words[today] != null ? Words.words[today] : "JACKG"
@@ -151,7 +152,13 @@ export default function WordleGrid(props) {
     }
 
     const handleEnd = (win) => {
+        if (win) {
+            setResultsText("Nice work, nerd. See you tomorrow!")
+        } else {
+            setResultsText("Try harder next time you fucking loser.")
+        }
         setShareText(createShareText())
+
         setPopupVisibility(true)
     }
     const popupCloseHandler = (e) => {
@@ -272,7 +279,7 @@ export default function WordleGrid(props) {
                 onClose={popupCloseHandler}
                 show={popupVisible}
                 shareText={shareText}
-                title="Nice work, nerd. See you tomorrow!"
+                title={resultsText}
                 >
             </WordlePopup>
         </div>
