@@ -48,7 +48,11 @@ const WordleKeyboard = (props) => {
     }
 
     useEffect(() => {
-        getGuessesFromLocalStorage()
+        const lastDate = localStorage.getItem("date");
+        if (lastDate && lastDate === getDate()) {
+            getGuessesFromLocalStorage()
+
+        }
     });
 
     return (

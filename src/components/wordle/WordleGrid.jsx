@@ -151,10 +151,34 @@ export default function WordleGrid(props) {
         return false;
     }
 
+    const updateGameAttempts = () => {
+        const gamesPlayed = localStorage.getItem(`gamesPlayed`);
+        const avgAttempts = localStorage.getItem(`avgAttempts`);
+        if (gamesPlayed) {
+            localStorage.setItem(`gamesPlayed`, gamesPlayed + 1)
+            var avg = gamesPlayed * avgAttempts
+            avg += row
+            localStorage.setItem(`avgAttempts`, avg / (gamesPlayed + 1))
+        } else {
+            localStorage.setItem(`gamesPlayed`, 1)
+            localStorage.setItem(`avgAttempts`, row)
+        }
+    }
+
     const handleEnd = (win) => {
+        updateGameAttempts()
+        // need to check that last time played wasnt today before updating stats
+        const streak = localStorage.getItem(`streak`);
         if (win) {
+            if (streak) {
+                // check that last games played was yesterday
+                localStorage.setItem(`streak`, streak + 1)
+            } else {
+                localStorage.setItem(`streak`, 1)
+            }
             setResultsText("Nice work, nerd. See you tomorrow!")
         } else {
+            localStorage.setItem(`streak`, 0)
             setResultsText("Try harder next time.")
         }
         setShareText(createShareText())
@@ -259,8 +283,19 @@ export default function WordleGrid(props) {
         // getting stored value
         const lastDate = localStorage.getItem("date");
         if (lastDate && lastDate !== getDate()) {
-            console.log("clearing local storage")
-            localStorage.clear();
+            console.log("deleting guesses from local storage")
+            localStorage.setItem(`prevDate`, lastDate)
+            var k = 1;
+            while (true) {
+                const guess = localStorage.getItem(`guess${k}`);
+                if (guess) {
+                    localStorage.removeItem(guess);
+                    k++
+                } else {
+                    break;
+                }
+            }
+            //localStorage.clear();
         }
         else if (lastDate && lastDate === getDate()) {
             console.log("we have started this already!")
