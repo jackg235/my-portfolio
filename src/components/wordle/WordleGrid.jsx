@@ -155,7 +155,7 @@ export default function WordleGrid(props) {
         if (win) {
             setResultsText("Nice work, nerd. See you tomorrow!")
         } else {
-            setResultsText("Try harder next time you fucking loser.")
+            setResultsText("Try harder next time.")
         }
         setShareText(createShareText())
 
