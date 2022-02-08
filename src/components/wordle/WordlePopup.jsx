@@ -46,9 +46,6 @@ const WordlePopup = (props) => {
     >
       <div className={"popup"}>
         <h3 className="title">{props.title}</h3>
-        <p>Games Played: {localStorage.getItem(`gamesPlayed`)}</p>
-        <p>Current Streak: {localStorage.getItem(`streak`)}</p>
-        <p>Avg Attempts: {avgAttempts()}</p>
         <a class="btn popup-btn" onClick={share} role="button">
         Copy Results
             </a>
