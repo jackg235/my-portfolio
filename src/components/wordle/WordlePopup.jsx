@@ -18,6 +18,19 @@ const WordlePopup = (props) => {
     document.body.removeChild(el);
   }
 
+  const avgAttempts = () => {
+    console.log("jvbhjh")
+    const gamesPlayed = localStorage.getItem(`gamesPlayed`);
+    const totalAttempts = localStorage.getItem(`totalAttempts`);
+    if (!gamesPlayed || !totalAttempts) {
+      return 0
+    }
+    const avg = localStorage.getItem(`totalAttempts`) / parseInt(gamesPlayed) 
+    console.log("avfd")
+    console.log(avg)
+    return avg.toFixed(2)
+  }
+
 
   useEffect(() => {
     setShow(props.show);
@@ -33,6 +46,9 @@ const WordlePopup = (props) => {
     >
       <div className={"popup"}>
         <h3 className="title">{props.title}</h3>
+        <p>Games Played: {localStorage.getItem(`gamesPlayed`)}</p>
+        <p>Current Streak: {localStorage.getItem(`streak`)}</p>
+        <p>Avg Attempts: {avgAttempts()}</p>
         <a class="btn popup-btn" onClick={share} role="button">
         Copy Results
             </a>

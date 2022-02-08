@@ -151,34 +151,67 @@ export default function WordleGrid(props) {
         return false;
     }
 
-    const updateGameAttempts = () => {
+    const streakAlive = (lastUpdateDate, lastDate) => {
+        console.log("comparing " + lastUpdateDate + ", " + lastDate)
+        const lastDateArr = lastDate.split("/");
+        const lastUpdateDateArr = lastUpdateDate.split("/");
+        // same year
+        if (lastDateArr[2] === lastUpdateDateArr[2]) {
+            // same month
+            if (lastDateArr[0] === lastUpdateDateArr[0]) {
+                // check if day before
+                return parseInt(lastUpdateDateArr[1]) + 1 == parseInt(lastDateArr[1])
+            } 
+            // different month
+            else if (parseInt(lastUpdateDateArr[0]) + 1 == parseInt(lastDateArr[0])) {
+                return parseInt(lastUpdateDateArr[1]) >= 28 && parseInt(lastDateArr[1]) == 1
+            }
+        }
+        return false
+    }
+
+    const updateStatistics = (win) => {
+        const lastDate = localStorage.getItem(`date`);
+        const lastUpdateDate = localStorage.getItem(`lastUpdateDate`);
+
+        // check if we have already updated stats today
+        if (lastUpdateDate && lastDate && lastDate === lastUpdateDate) {
+            console.log("not updating because same day")
+            return
+        }
+
+        // update the streak
+        const streak = localStorage.getItem(`streak`);
+        if (!win) {
+            localStorage.setItem(`streak`, 0)
+        } else {
+            if (lastUpdateDate && streakAlive(lastUpdateDate, lastDate)) {
+                localStorage.setItem(`streak`, parseInt(streak) + 1)
+            } else {
+                localStorage.setItem(`streak`, 1)
+            } 
+        }
+        // update the last update day for stats
+        localStorage.setItem(`lastUpdateDate`, lastDate)
+
+        // update games played and total attempts
         const gamesPlayed = localStorage.getItem(`gamesPlayed`);
-        const avgAttempts = localStorage.getItem(`avgAttempts`);
+        const totalAttempts = localStorage.getItem(`totalAttempts`);
         if (gamesPlayed) {
-            localStorage.setItem(`gamesPlayed`, gamesPlayed + 1)
-            var avg = gamesPlayed * avgAttempts
-            avg += row
-            localStorage.setItem(`avgAttempts`, avg / (gamesPlayed + 1))
+            localStorage.setItem(`gamesPlayed`, parseInt(gamesPlayed) + 1)
+            localStorage.setItem(`totalAttempts`, parseInt(totalAttempts) + row)
         } else {
             localStorage.setItem(`gamesPlayed`, 1)
-            localStorage.setItem(`avgAttempts`, row)
+            localStorage.setItem(`totalAttempts`, row)
         }
     }
 
     const handleEnd = (win) => {
-        updateGameAttempts()
+        updateStatistics(win)
         // need to check that last time played wasnt today before updating stats
-        const streak = localStorage.getItem(`streak`);
         if (win) {
-            if (streak) {
-                // check that last games played was yesterday
-                localStorage.setItem(`streak`, streak + 1)
-            } else {
-                localStorage.setItem(`streak`, 1)
-            }
             setResultsText("Nice work, nerd. See you tomorrow!")
         } else {
-            localStorage.setItem(`streak`, 0)
             setResultsText("Try harder next time.")
         }
         setShareText(createShareText())
