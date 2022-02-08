@@ -316,19 +316,7 @@ export default function WordleGrid(props) {
         // getting stored value
         const lastDate = localStorage.getItem("date");
         if (lastDate && lastDate !== getDate()) {
-            console.log("deleting guesses from local storage")
-            localStorage.setItem(`prevDate`, lastDate)
-            var k = 1;
-            while (true) {
-                const guess = localStorage.getItem(`guess${k}`);
-                if (guess) {
-                    localStorage.removeItem(guess);
-                    k++
-                } else {
-                    break;
-                }
-            }
-            //localStorage.clear();
+            localStorage.clear();
         }
         else if (lastDate && lastDate === getDate()) {
             console.log("we have started this already!")
