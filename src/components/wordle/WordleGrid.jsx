@@ -169,7 +169,7 @@ export default function WordleGrid(props) {
         }
         return false
     }
-
+    
     const updateStatistics = (win) => {
         const lastDate = localStorage.getItem(`date`);
         const lastUpdateDate = localStorage.getItem(`lastUpdateDate`);
@@ -207,7 +207,7 @@ export default function WordleGrid(props) {
     }
 
     const handleEnd = (win) => {
-        updateStatistics(win)
+        //updateStatistics(win)
         // need to check that last time played wasnt today before updating stats
         if (win) {
             setResultsText("Nice work, nerd. See you tomorrow!")
