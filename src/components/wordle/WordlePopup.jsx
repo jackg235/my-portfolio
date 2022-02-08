@@ -19,14 +19,12 @@ const WordlePopup = (props) => {
   }
 
   const avgAttempts = () => {
-    console.log("jvbhjh")
     const gamesPlayed = localStorage.getItem(`gamesPlayed`);
     const totalAttempts = localStorage.getItem(`totalAttempts`);
     if (!gamesPlayed || !totalAttempts) {
       return 0
     }
     const avg = localStorage.getItem(`totalAttempts`) / parseInt(gamesPlayed) 
-    console.log("avfd")
     console.log(avg)
     return avg.toFixed(2)
   }
