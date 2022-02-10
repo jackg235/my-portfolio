@@ -22,7 +22,8 @@ app.get('/isWord', (req, res) => {
         method: "GET",
         headers: {
             'app_id': oxfordAppId,
-            'app_key': oxfordAppKey
+            'app_key': oxfordAppKey,
+            'Access-Control-Allow-Origin' : '*'
         }
     };
     https.get(options, (resp) => {
