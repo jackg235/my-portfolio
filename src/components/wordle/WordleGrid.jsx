@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Words from './WordleWords'
 import WordlePopup from './WordlePopup'
+import WordleNotAWordPopup from './WordleNotAWordPopup'
 import WordleKeyboard from "./WordleKeyboard";
 
 
@@ -19,9 +20,10 @@ const getDate = () => {
     return today
 }
 
-export default function WordleGrid(props) {
+export default function WordleGrid() {
     const [row, setRow] = useState(1);
     const [col, setCol] = useState(1);
+    const [isCorrectWord, setIsCorrectWord] = useState(true);
     const [shareText, setShareText] = useState("");
     const [popupVisible, setPopupVisibility] = useState(false);
     const [resultsText, setResultsText] = useState("");
@@ -92,19 +94,37 @@ export default function WordleGrid(props) {
     }
 
     const handleLastCharacter = () => {
-        const isCorrect = colorGuess()
-        saveToLocalStorage()
-
-        if (isCorrect) {
-            handleEnd(true)
-            return
-        } 
-        if (row == numRows) {
-            handleEnd(false)
-            return
+        var guess = ""
+        for (let i = 1; i <= answer.length; i++) {
+            const node = document.querySelector(`#e${row}${i}`);
+            guess = guess + node.textContent
         }
-        setRow(row + 1)
-        setCol(1)
+        const wordLower = guess.toLowerCase()
+
+        fetch(`http://localhost:8080/isWord?word=${wordLower}`)
+            .then(res => res.json())
+            .then(data => {
+                if (!data) {
+                    console.log("error querying db")
+                    return false
+                }
+                setIsCorrectWord(data.isWord)
+                if (data.isWord) {
+                    const isCorrect = colorGuess()
+                    saveToLocalStorage()
+
+                    if (isCorrect) {
+                        handleEnd(true)
+                        return
+                    }
+                    if (row == numRows) {
+                        handleEnd(false)
+                        return
+                    }
+                    setRow(row + 1)
+                    setCol(1)
+                }
+            })
     }
 
     const saveToLocalStorage = () => {
@@ -221,6 +241,9 @@ export default function WordleGrid(props) {
     const popupCloseHandler = (e) => {
         setPopupVisibility(false);
       };
+    const wordPopupCloseHandler = (e) => {
+        setIsCorrectWord(true);
+    };
     
     const setFromLocalStorage = () => {
         var k = 1;
@@ -273,7 +296,6 @@ export default function WordleGrid(props) {
 
     const onKeyDown = e => {
         const l = e.key.toUpperCase()
-        console.log(e.keyCode)
         // check if backspace
         if (e.keyCode === 8) {
             deleteCellValue(row, col-1)
@@ -342,6 +364,11 @@ export default function WordleGrid(props) {
                 title={resultsText}
                 >
             </WordlePopup>
+            <WordleNotAWordPopup
+                onClose={wordPopupCloseHandler}
+                show={!isCorrectWord}
+            >
+            </WordleNotAWordPopup>
         </div>
         <WordleKeyboard parentCallback = {handleCallback}/>
         </>

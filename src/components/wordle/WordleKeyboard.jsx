@@ -20,7 +20,6 @@ const WordleKeyboard = (props) => {
     const answer = Words.words[today] != null ? Words.words[today] : "JACKG"
 
     const getGuessesFromLocalStorage = () => {
-        console.log("here")
         var k = 1;
         while (true) {
             const guess = localStorage.getItem(`guess${k}`);
