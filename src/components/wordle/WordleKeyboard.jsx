@@ -17,7 +17,7 @@ const WordleKeyboard = (props) => {
         e.preventDefault();
     }
     const today = getDate()
-    const answer = Words.words[today] != null ? Words.words[today] : "JACKG"
+    const answer = Words.words[today] != null ? Words.words[today] : "Joint"
 
     const getGuessesFromLocalStorage = () => {
         console.log("here")
